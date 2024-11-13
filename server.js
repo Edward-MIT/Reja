@@ -17,11 +17,19 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 routingga bog'liq codelar
-app.get("/hello", function (req, res) {
-  res.end("<h1>Hello world by Edward MIT</h1>");
+// app.get("/hello", function (req, res) {
+//   res.end("<h1>Hello world by Edward MIT</h1>");
+// });
+// app.get("/gift", function (req, res) {
+//   res.end("Bugun sening kuning, kuning sening bugun");
+// });
+app.post("/create-item", (req, res)=>{
+   console.log(req.body);
+   res.json({test: "succes"});
 });
-app.get("/gift", function (req, res) {
-  res.end("Bugun sening kuning, kuning sening bugun");
+
+app.get("/", function(req, res){
+  res.render("harid");
 });
 
 
