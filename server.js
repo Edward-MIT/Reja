@@ -2,6 +2,16 @@ console.log("Hello world!");
 const express = require ("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8" , (err,data) => {
+  if(err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data)
+  }
+});
 
 //
 // 1 kirish codelari
@@ -17,16 +27,19 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 routingga bog'liq codelar
-// app.get("/hello", function (req, res) {
-//   res.end("<h1>Hello world by Edward MIT</h1>");
-// });
-// app.get("/gift", function (req, res) {
-//   res.end("Bugun sening kuning, kuning sening bugun");
-// });
+
 app.post("/create-item", (req, res)=>{
    console.log(req.body);
    res.json({test: "succes"});
 });
+
+// publishingdagi codelar
+
+app.get('/author', (req, res) =>{
+  res.render("author", {user: user});
+});
+
+
 
 app.get("/", function(req, res){
   res.render("harid");
