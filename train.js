@@ -5,11 +5,16 @@ Masalan Countletter(" e " , "engineer") 3ni return qilsin  */
 
 // Masalani yechimi
 
-function countLetter (word, number(){
-  if ()
-}); {
-  let
-
-  countLetter
-
+function countLetter(letter, word) {
+  let count = 0;
+  word.split("").forEach(char => {
+      if (char === letter) {
+          count++;
+      }
+  });
+  return count;
 }
+
+console.log(countLetter("e", "engineer"));
+
+console.log("videodagi codelar lesson js faylga yozildi");
