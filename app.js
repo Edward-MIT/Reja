@@ -3,6 +3,10 @@ const express = require ("express");
 const app = express();
 const fs = require("fs");
 
+// mongo db ni chaqirish
+
+const db = require("./server").db();
+
 let user;
 fs.readFile("database/user.json", "utf8" , (err,data) => {
   if(err) {
