@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "train":"nodemon train.js",
-    "lesson":"nodemon lesson.js",
+    "train": "nodemon train.js",
+    "lesson": "nodemon lesson.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edward MIT",
@@ -15,6 +15,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "mongodb": "^6.10.0",
     "nodemon": "^3.1.7"
   }
 }
