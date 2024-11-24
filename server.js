@@ -8,7 +8,10 @@ const connectionString =
 // MongoDB ulanish
 mongodb.connect(
   connectionString,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
   (err, client) => {
     if (err) {
       console.log("Error on Connection");
@@ -19,8 +22,8 @@ mongodb.connect(
       // `app` ni oling va serverni ishga tushiring
       const app = require("./app");
       const server = http.createServer(app);
-      const PORT = 3000;
-      server.listen(PORT, () => {
+      let PORT = 3000;
+      server.listen(PORT, function () {
         console.log(
           `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`
         );
