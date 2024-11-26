@@ -17,7 +17,7 @@ function countLetter(inputString) {
      return count;
    }
 
-   console.log(countLetter("hello"));
+   console.log(countLetter("hello666666"));
 
 
 
