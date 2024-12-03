@@ -1,20 +1,87 @@
+// TASK F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+// task yechilishi
+
+
+
+
+function findDoublers(str) {
+  const charCount = {};
+
+  for (let char of str) {
+    if (charCount[char]) {
+      return true;
+    }
+    charCount[char] = 1;
+  }
+
+  return false;
+}
+
+
+console.log(findDoublers("hel"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// E-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib o'sha stringni teskari qilib return qilsin.
+
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+
+// masalani yechimi
+
+// function  teskariLog (str) {
+//   return str.split('').reverse('').join('');
+// }
+
+// const result = teskariLog("hello");
+// console.log(result);
+
+
+
+
+
+
+
 // D-TASK:
 
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
 
-function checkContent(string1, string2) {
-  const str1 = string1.split("").sort().join('');
-  const str2 = string2.split('').sort().join('');
+// function checkContent(string1, string2) {
+//   const str1 = string1.split("").sort().join('');
+//   const str2 = string2.split('').sort().join('');
 
-  return str1 === str2;
-
-
- }
+//   return str1 === str2;
 
 
-console.log(checkContent('mengg','nem'));
+//  }
+
+
+// console.log(checkContent('mengg','nem'));
 
 
 
